@@ -32,11 +32,10 @@ function runEnter () {
 
     // Grab key-value pairs for each object in filtered data
     filteredData.forEach(function(filteredData) {
+        var row = tbody.append("tr");
         Object.entries(filteredData).forEach(function([key, value]) {
             console.log(key, value);
-            var row = tbody.append("tr");
-            var cell = row.append("td");
-            cell.text(value);
+            var cell = row.append("td").text(value);
         });
     });
     
