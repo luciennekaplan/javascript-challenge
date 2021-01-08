@@ -1,0 +1,32 @@
+.wrapper {
+    position: relative;
+    min-height: 100%;
+    padding-bottom: 130px;
+    overflow: auto;
+  }
+
+
+.mainimage {
+    height: 500px;
+    width: 500px;
+}
+
+.header {
+    color: white;
+    margin-top: 200px;
+    font-size: 0.1rem;
+    animation: title 1.2s forwards linear;
+  }
+  
+.littleheader {
+    color:black;
+    font-size: 2rem;
+    opacity: 0;
+    animation: subtitle 1.2s forwards linear;
+    animation-delay: 1.2s;
+  }
+  
+
+.buffer {
+    margin-top:4%;
+}

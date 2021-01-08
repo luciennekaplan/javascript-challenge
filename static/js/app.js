@@ -30,7 +30,7 @@ function runEnter () {
     var filteredData = tableData.filter(record => record.datetime === inputValue);
     console.log(filteredData);
 
-    // Grab key-value pairs for each object in filtered data
+    // Append filtered data to table
     filteredData.forEach(function(filteredData) {
         var row = tbody.append("tr");
         Object.entries(filteredData).forEach(function([key, value]) {
