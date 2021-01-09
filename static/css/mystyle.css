@@ -19,11 +19,17 @@
 
 .textdelay {
     opacity: 0;
-    animation: subtitle 1s forwards linear;
-    animation-delay: 1s;  
+    animation: subtitle .75s forwards linear;
+    animation-delay: .75s;  
 }
 
 .textdelay2 {
+    opacity: 0;
+    animation: subtitle 1.2s forwards linear;
+    animation-delay: 1.2s;  
+}
+
+.picturedelay {
     opacity: 0;
     animation: subtitle 1.5s forwards linear;
     animation-delay: 1.5s;  
