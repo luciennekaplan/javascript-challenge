@@ -35,6 +35,17 @@
     animation-delay: 1.5s;  
 }
 
+.wrapper {
+    position: relative;
+    min-height: 100%;
+    padding-bottom: 130px;
+    overflow: auto;
+  }
+
+#table-area th {
+    text-align: center;
+  }
+  
 
 @keyframes subtitle {
     from {

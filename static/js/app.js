@@ -15,6 +15,8 @@ form.on("submit", runEnter);
 
 // Event handler function
 function runEnter () {
+
+    tbody.text("");
     
     // Prevent page from refreshing
     d3.event.preventDefault();
@@ -35,6 +37,7 @@ function runEnter () {
         var row = tbody.append("tr");
         Object.entries(filteredData).forEach(function([key, value]) {
             console.log(key, value);
+            var cell = row.append("td").text("");
             var cell = row.append("td").text(value);
         });
     });
