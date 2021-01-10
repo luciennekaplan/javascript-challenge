@@ -2,6 +2,7 @@ var tableData = data;
 
 // Select the button
 var button = d3.select("#filter-btn");
+var refreshbutton = d3.select("#refresh-btn");
 
 // Select the forms
 var form = d3.select("#datetime");
@@ -12,6 +13,7 @@ var tbody = d3.select("tbody");
 
 // Event handlers
 button.on("click", runEnter);
+refreshbutton.on("click", BuildTable);
 form.on("submit", runEnter);
 
 // Event handler function
@@ -58,6 +60,7 @@ function runEnter () {
 
 function BuildTable (data) {
     tbody.text("");
+    data = tableData;
     data.forEach(function(element) {
         var row = tbody.append("tr");
         Object.entries(element).forEach(function([key, value]) {
