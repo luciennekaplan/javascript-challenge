@@ -29,12 +29,21 @@ function runEnter () {
     // Get the value property of the input elements
     var inputValue = inputElement.property("value");
     var inputValue2 = inputElement2.property("value");
-    console.log(inputValue2);
     
-    // Filter data where datetime equals user input 
-    var filteredData = tableData.filter(record => record.datetime === inputValue);
-    console.log(filteredData);
+    // Filter data based on user input
+    if (inputValue.length > 0 && inputValue2.length > 0) {
+        var filteredData = tableData.filter(record => record.datetime === inputValue && record.city === inputValue2);
+        console.log(filteredData)
+    }
+    
+    if(inputValue.length === 0) {
+        var filteredData = tableData.filter(record => record.city === inputValue2);
+    }
 
+    if(inputValue2.length === 0) {
+        var filteredData = tableData.filter(record => record.datetime === inputValue);
+    }
+    
     // Append filtered data to table
     filteredData.forEach(function(filteredData) {
         var row = tbody.append("tr");
@@ -48,7 +57,7 @@ function runEnter () {
 };
 
 function BuildTable (data) {
-    tbody.html("");
+    tbody.text("");
     data.forEach(function(element) {
         var row = tbody.append("tr");
         Object.entries(element).forEach(function([key, value]) {
